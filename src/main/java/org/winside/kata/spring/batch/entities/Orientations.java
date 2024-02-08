@@ -1,8 +1,8 @@
 package org.winside.kata.spring.batch.entities;
 
-public enum Orientation {
+public enum Orientations {
     N,
     E,
-    W,
-    S
+    S,
+    W
 }

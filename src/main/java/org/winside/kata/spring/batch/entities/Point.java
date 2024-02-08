@@ -1,40 +1,45 @@
 package org.winside.kata.spring.batch.entities;
 
 public class Point {
-    int abscisse;
-    int ordonnee;
-    Orientation orientation;
+    private int x;
+    private int y;
+    private Orientations orientations;
 
-    public int getAbscisse() {
-        return abscisse;
+    public Point(int x, int y, Orientations orientation) {
+        this.x = x;
+        this.y = y;
+        this.orientations = orientation;
     }
 
-    public void setAbscisse(int abscisse) {
-        this.abscisse = abscisse;
+    public Orientations setOrientation(Orientations orientations) {
+        return this.orientations = orientations;
     }
 
-    public int getOrdonnee() {
-        return ordonnee;
+
+    public int getX() {
+        return x;
     }
 
-    public void setOrdonnee(int ordonnee) {
-        this.ordonnee = ordonnee;
+    public int getY() {
+        return y;
     }
 
-    public Orientation getOrientation() {
-        return orientation;
+    public Orientations getOrientation() {
+        return orientations;
     }
 
-    public void setOrientation(Orientation orientation) {
-        this.orientation = orientation;
+    public void moveNorth() {
+        this.y = this.y + 1;
     }
 
-    public Point(int abscisse, int ordonnee, Orientation orientation) {
-        this.abscisse = abscisse;
-        this.ordonnee = ordonnee;
-        this.orientation = orientation;
+    public void moveEast() {
+        this.x = this.x + 1;
     }
 
-    public Point() {
+    public void moveWest() {
+        this.x = this.x - 1;
+    }
+    public void moveSouth() {
+        this.y = this.y - 1;
     }
 }
